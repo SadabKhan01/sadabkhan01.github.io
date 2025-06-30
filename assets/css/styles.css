@@ -82,5 +82,25 @@ footer {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+/* Volunteer & Hobbies: captions + images */
+#volunteer-hobbies .hobby-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+#volunteer-hobbies .hobby-item p {
+  margin: 0;
+  font-style: italic;
+}
+#volunteer-hobbies .hobby-image {
+  width: 180px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
 
 
