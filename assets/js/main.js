@@ -19,3 +19,15 @@ document.querySelectorAll('nav a[href^="#"]').forEach(link => {
     }
   });
 });
+
+// Contact form submit handler (Issue #14)
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const status = document.getElementById('form-status');
+    status.textContent = 'Thank you! I\'ll get back to you soon.';
+    status.classList.remove('hidden');
+    contactForm.reset();
+  });
+}
