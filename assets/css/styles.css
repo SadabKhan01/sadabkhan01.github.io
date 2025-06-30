@@ -107,6 +107,23 @@ footer {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+/* Remove bullets & tighten up Volunteer & Hobbies list */
+#volunteer-hobbies ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Add breathing room between each list item */
+#volunteer-hobbies ul > li {
+  margin-bottom: 1rem;
+}
+
+/* Extra space between Education and Volunteer sections */
+#education {
+  margin-bottom: 3rem;
+}
+
 
 
 
