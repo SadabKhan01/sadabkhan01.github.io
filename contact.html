@@ -20,34 +20,58 @@
   <main>
     <section id="contact">
       <h2>Contact Me</h2>
-
-      <!-- Placeholder form -->
-      <form>
-        <label for="name">Name:</label><br/>
-        <input type="text" id="name" name="name" placeholder="Sadab Khan" disabled /><br/><br/>
-
-        <label for="email">Email:</label><br/>
-        <input type="email" id="email" name="email" placeholder="mohammadsadmansadabkhan@gmail.com" disabled /><br/><br/>
-
-        <label for="message">Message:</label><br/>
-        <textarea id="message" name="message" placeholder="Email me." rows="4" disabled></textarea><br/><br/>
-
-        <p><em>This form is a placeholder. Please reach out via email or download my resume below.</em></p>
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Sadab Khan"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="mohammadsadmansadabkhan@gmail.com"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Email me."
+            rows="4"
+            required
+          ></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+        <p id="form-status" class="hidden"></p>
       </form>
 
-      <!-- Resume link -->
-      <p>
-        <a href="assets/NewUpdatedResume.pdf" target="_blank">📄 Download my Resume (PDF)</a>
-      </p>
-
-      <!-- Social links -->
-      <p>
-        Or find me on  
-        <a href="https://github.com/SadabKhan01" target="_blank">GitHub</a> •  
-        <a href="https://www.linkedin.com/in/sadab-khan-337b23213/" target="_blank">LinkedIn</a>
-      </p>
+      <div class="social-links">
+        <a href="assets/NewUpdatedResume.pdf" target="_blank">
+          📄 Download my Resume (PDF)
+        </a>
+        <p>
+          Or find me on
+          <a href="https://github.com/SadabKhan01" target="_blank">GitHub</a> •
+          <a
+            href="https://www.linkedin.com/in/sadab-khan-337b23213/"
+            target="_blank"
+            >LinkedIn</a
+          >
+        </p>
+      </div>
     </section>
   </main>
+
 
   <footer>
     &copy; 2025 Sadab Khan
