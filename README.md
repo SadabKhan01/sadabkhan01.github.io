@@ -6,18 +6,18 @@ Personal portfolio of **Sadab Khan** — CS @ SFU · SWE @ OSI Maritime Systems 
 
 ## Stack
 
-Hand-built with vanilla HTML, CSS, and JavaScript — no frameworks, no build step.
+React 18 + Vite + Framer Motion, with an Anthropic-inspired design system — warm cream palette, serif display type, terracotta accents, and generous whitespace.
 
-- Animated canvas starfield + aurora gradient background
-- Typewriter role rotation and scroll-reveal animations (IntersectionObserver)
-- Fully responsive with a mobile nav, `prefers-reduced-motion` support
+- Typewriter role rotation, scroll-linked starburst mark, and staggered scroll-reveal animations
+- All content lives in [`src/data.js`](src/data.js) — edit that file to update the site
+- Fully responsive with a mobile nav and `prefers-reduced-motion` support
 
 ## Development
 
-Serve locally with any static server:
-
 ```sh
-python3 -m http.server 8000
+npm install
+npm run dev      # local dev server
+npm run build    # production build to dist/
 ```
 
-Deployed automatically to GitHub Pages on every push to `main` via `.github/workflows/static.yml`.
+Deployed automatically to GitHub Pages on every push to `main` via `.github/workflows/static.yml` (builds with Node 22 and publishes `dist/`).
