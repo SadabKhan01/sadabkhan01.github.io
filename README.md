@@ -1,11 +1,23 @@
-## Documentation
+# sadabkhan01.github.io
 
-This portfolio site is a static HTML/CSS/JS project hosted on GitHub Pages:
+Personal portfolio of **Sadab Khan** — CS @ SFU · SWE @ OSI Maritime Systems · Software Lead @ SFU Satellite Design · Product Head @ Fitsomnia.
 
-- **Home**: Introduction with quick links to other sections.  
-- **About**: Bio, photo, education, volunteer work, hobbies (with cat images), and skills.  
-- **Projects**: future projects
-- **Contact**: A clean form with JavaScript feedback, plus resume download and social links.  
+**Live:** https://sadabkhan01.github.io
 
-All styling lives in `assets/css/styles.css`, and interactivity (footer year, form handling) in `assets/js/main.js`.  
-To run locally, just open `index.html` in your browser. Pushing to `main` auto-deploys via GitHub Pages.
+## Stack
+
+Hand-built with vanilla HTML, CSS, and JavaScript — no frameworks, no build step.
+
+- Animated canvas starfield + aurora gradient background
+- Typewriter role rotation and scroll-reveal animations (IntersectionObserver)
+- Fully responsive with a mobile nav, `prefers-reduced-motion` support
+
+## Development
+
+Serve locally with any static server:
+
+```sh
+python3 -m http.server 8000
+```
+
+Deployed automatically to GitHub Pages on every push to `main` via `.github/workflows/static.yml`.
