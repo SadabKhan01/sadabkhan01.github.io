@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Reveal from "./components/Reveal.jsx";
+import Bot from "./components/Bot.jsx";
+import AuditorGame from "./components/AuditorGame.jsx";
 import { GitHubIcon, LinkedInIcon, MailIcon, ArrowIcon, Starburst } from "./components/Icons.jsx";
 import { profile, stats, experience, projects, skills, education } from "./data.js";
 
@@ -53,8 +55,8 @@ function Nav() {
           <a href="#experience">Experience</a>
           <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
-          <a className="nav__cta" href={profile.resume} target="_blank" rel="noopener noreferrer">Resume</a>
+          <a href="#game">Play</a>
+          <a className="nav__cta" href="#contact">Get in touch</a>
         </nav>
         <button className={`nav__burger ${open ? "open" : ""}`} aria-label="Toggle menu" onClick={() => setOpen(!open)}>
           <span /><span /><span />
@@ -75,28 +77,31 @@ function Hero() {
       <motion.div className="hero__mark" style={{ rotate, y: drift }} aria-hidden="true">
         <Starburst style={{ width: "100%" }} />
       </motion.div>
+      <div className="hero__bot" aria-hidden="true">
+        <Bot size={64} mood="wave" delay={0.6} />
+      </div>
       <div className="wrap">
-        <Reveal>
+        <Reveal immediate>
           <p className="hero__eyebrow"><span className="dot" />Vancouver, BC — open to opportunities</p>
         </Reveal>
-        <Reveal delay={0.08}>
+        <Reveal immediate delay={0.08}>
           <h1 className="hero__title">
             Building software from the <em>ocean floor</em> to <em>orbit</em>.
           </h1>
         </Reveal>
-        <Reveal delay={0.16}>
+        <Reveal immediate delay={0.16}>
           <p className="hero__sub">
-            I'm Sadab — a CS student at <strong>Simon Fraser University</strong> shipping
-            production AI, naval mission systems, and satellite software. Currently at{" "}
-            <strong>OSI Maritime Systems</strong>, leading software for{" "}
-            <strong>SFU Satellite Design</strong>, and heading product at{" "}
+            Hi, I'm Sadab. I study CS at <strong>Simon Fraser University</strong> and I like
+            building things that actually ship: navigation software at{" "}
+            <strong>OSI Maritime Systems</strong>, satellite systems with{" "}
+            <strong>SFU Satellite Design</strong>, and AI products at{" "}
             <strong>Fitsomnia</strong>.
           </p>
         </Reveal>
-        <Reveal delay={0.22}>
+        <Reveal immediate delay={0.22}>
           <p className="hero__role">{role}<span style={{ opacity: 0.6 }}>▍</span></p>
         </Reveal>
-        <Reveal delay={0.3}>
+        <Reveal immediate delay={0.3}>
           <div className="hero__actions">
             <a className="btn btn--ink" href="#projects">See my work</a>
             <a className="btn btn--line" href="#contact">Get in touch</a>
@@ -147,25 +152,27 @@ function About() {
           <div className="about__text">
             <Reveal>
               <p>
-                I like working where software meets the physical world. I've written simulation
-                pipelines for <strong>autonomous submarines</strong>, I lead the software and embedded
-                systems team building a <strong>satellite</strong> for the Canadian Space Agency's CIRC
-                challenge, and I build <strong>naval mission systems</strong> at OSI Maritime Systems.
+                Most of my work lives around <strong>automation and simulation</strong>. Right now
+                I'm at <strong>OSI Maritime Systems</strong> working on automation for their latest
+                integrated navigation software, the bridge systems that naval fleets depend on
+                every day.
               </p>
             </Reveal>
             <Reveal delay={0.08}>
               <p>
-                On the product side, I led backend and AI development at <strong>Fitsomnia</strong>,
-                scaling the platform from <strong>30K to 100K+ users</strong> — shipping an AI diet
-                coach and an AI food scanner into production along the way.
+                Outside of co-op I lead the Software &amp; Embedded Systems subteam at{" "}
+                <strong>SFU Satellite Design</strong>, where we're building Project Polaris for the
+                Canadian Space Agency's CIRC. And at <strong>Fitsomnia</strong> I head product,
+                after leading the backend and AI work that scaled the platform from{" "}
+                <strong>30K to 100K+ users</strong> with an AI diet coach and food scanner in
+                production.
               </p>
             </Reveal>
             <Reveal delay={0.16}>
               <p>
-                I'm also a serial hackathon-er: my team won <strong>Best UI at SillyHacks</strong> (SFU
-                Surge) with a reverse-Turing-test game, and built an AI-guarded healthcare platform
-                with <strong>Microsoft Garage</strong> in a single day. When I'm not shipping, I'm
-                automating soccer robots for <strong>RoboCup SSL 2026</strong>.
+                I also love a good hackathon. My team took <strong>Best UI at SillyHacks</strong>{" "}
+                (SFU Surge) with a reverse-Turing-test game, and we built an AI-guarded healthcare
+                platform with <strong>Microsoft Garage</strong> in a single day.
               </p>
             </Reveal>
           </div>
@@ -268,6 +275,19 @@ function Skills() {
   );
 }
 
+function Game() {
+  return (
+    <section className="section" id="game">
+      <div className="wrap">
+        <SectionHead kicker="05" title="Prove you're a machine" />
+        <Reveal>
+          <AuditorGame />
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
 function Contact() {
   return (
     <section className="contact" id="contact">
@@ -278,7 +298,7 @@ function Contact() {
         <Reveal delay={0.1}>
           <p className="contact__sub">
             I'm always open to interesting projects, co-op opportunities, and hackathon teams.
-            Whether you have a question or just want to say hi — my inbox is open.
+            Whether you have a question or just want to say hi, my inbox is open.
           </p>
         </Reveal>
         <Reveal delay={0.18}>
@@ -294,7 +314,10 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="wrap footer__inner">
-        <p>© {new Date().getFullYear()} Sadab Khan · Vancouver, BC</p>
+        <div className="footer__left">
+          <Bot size={40} mood="wave" float={false} />
+          <p>© {new Date().getFullYear()} Sadab Khan · Vancouver, BC</p>
+        </div>
         <div className="footer__links">
           <a href={profile.github} target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -316,6 +339,7 @@ export default function App() {
         <Experience />
         <Projects />
         <Skills />
+        <Game />
         <Contact />
       </main>
       <Footer />

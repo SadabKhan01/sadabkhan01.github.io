@@ -2,10 +2,9 @@ export const profile = {
   name: "Sadab Khan",
   fullName: "Mohammad Sadman Sadab Khan",
   location: "Vancouver, BC, Canada",
-  email: "codecrafterscastell@gmail.com",
+  email: "sadab_khan@sfu.ca",
   github: "https://github.com/SadabKhan01",
   linkedin: "https://www.linkedin.com/in/sadab-khan-dev/",
-  resume: "/assets/NewUpdatedResume.pdf",
   roles: [
     "Software Engineer @ OSI Maritime Systems",
     "Software Lead @ SFU Satellite Design",
@@ -15,7 +14,7 @@ export const profile = {
 
 export const stats = [
   { value: "100K+", label: "users scaled at Fitsomnia" },
-  { value: "2×", label: "hackathon wins with Microsoft & SFU Surge" },
+  { value: "Best UI", label: "winner at SillyHacks, SFU Surge" },
   { value: "3", label: "concurrent engineering & product roles" },
   { value: "2027", label: "BSc Computer Science, SFU" },
 ];
@@ -27,7 +26,7 @@ export const experience = [
     org: "OSI Maritime Systems",
     meta: "Burnaby, BC · Hybrid",
     points: [
-      "Building integrated navigation and tactical solutions for naval fleets — mission-critical maritime software trusted by navies worldwide.",
+      "Working on automation for OSI's latest integrated navigation software, the mission-critical bridge systems that naval fleets around the world rely on.",
     ],
   },
   {
@@ -52,15 +51,6 @@ export const experience = [
     ],
   },
   {
-    period: "Sep 2024 — Present",
-    role: "Software Developer",
-    org: "SFU Robot Soccer Club",
-    meta: "Burnaby, BC · RoboCup SSL 2026",
-    points: [
-      "Automating soccer robots for RoboCup SSL — improving the GUI, simulation, and A* shortest-path navigation.",
-    ],
-  },
-  {
     period: "Oct 2024 — Feb 2025",
     role: "Software Engineer",
     org: "Subvision Engineering",
@@ -71,12 +61,12 @@ export const experience = [
     ],
   },
   {
-    period: "May 2025 — Aug 2025",
-    role: "President",
-    org: "SFU Bangladesh Students' Alliance",
-    meta: "Volunteering",
+    period: "Sep 2024 — Jan 2025",
+    role: "Software Developer",
+    org: "SFU Robot Soccer Club",
+    meta: "Burnaby, BC · RoboCup SSL",
     points: [
-      "Led the executive team, organized events and fundraising, and represented the student body.",
+      "Worked on the GUI, simulation, and A* shortest-path navigation for autonomous soccer robots.",
     ],
   },
 ];
@@ -86,7 +76,7 @@ export const projects = [
     badge: "Best UI · SillyHacks, SFU Surge",
     title: "Us Among AI",
     description:
-      "A retro-futuristic browser game built around a reverse Turing test — act machine enough to survive. A Gemini-powered Auditor watches rhythm, hesitation, corrections, and keystroke patterns in real time and judges how convincingly non-human you are.",
+      "A retro-futuristic browser game built around a reverse Turing test. Act machine enough to survive: a Gemini-powered Auditor watches rhythm, hesitation, corrections, and keystroke patterns in real time and judges how convincingly non-human you are.",
     tags: ["Next.js", "TypeScript", "Socket.IO", "Zustand", "Web Audio API", "Gemini"],
     link: "https://github.com/Silly-Hacks/Us-Among-AI",
   },
@@ -94,7 +84,7 @@ export const projects = [
     badge: "Breakthrough Hacks × Microsoft Garage",
     title: "ClinAI Bridge",
     description:
-      "A secure medical scheduling and messaging platform with patient, doctor, and admin portals — built in one day. A structured Gemini pipeline with Zod validation, a server-side policy engine, safety guardrails, and Azure Health Data Services de-identification.",
+      "A secure medical scheduling and messaging platform with patient, doctor, and admin portals, built in one day. A structured Gemini pipeline with Zod validation, a server-side policy engine, safety guardrails, and Azure Health Data Services de-identification.",
     tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Azure", "Gemini"],
     link: "https://github.com/bidishaaroy/MShacks",
   },
@@ -102,17 +92,17 @@ export const projects = [
     badge: "In production · 100K+ users",
     title: "Ujjibok — AI Diet Coach",
     description:
-      "An AI diet coach and food scanner shipped to production at Fitsomnia. GPT-4.1 prompt engineering combined with image analysis and LLM reasoning to estimate calories for regional Bangladeshi foods — built to be reliable, not just demo-ready.",
+      "An AI diet coach and food scanner shipped to production at Fitsomnia. GPT-4.1 prompt engineering combined with image analysis and LLM reasoning to estimate calories for regional Bangladeshi foods, built to be reliable rather than just demo-ready.",
     tags: ["GPT-4.1", "NestJS", "Flutter", "Azure", "JWT"],
     link: null,
   },
   {
-    badge: "Robotics & simulation",
-    title: "Autonomous Submarine Simulation",
+    badge: "CMPT 340 · Deep learning",
+    title: "STONE-SEE",
     description:
-      "ROS 2 and Gazebo simulation pipelines for autonomous underwater navigation at Subvision Engineering, with automated Python validation workflows running on Linux.",
-    tags: ["ROS 2", "Gazebo", "Python", "C++", "Linux"],
-    link: "https://github.com/SadabKhan01/ros2_ws",
+      "A deep learning system that detects kidney stones in CT scan images, giving healthcare professionals fast and accurate diagnostic support. Trained on real CT data with an augmentation pipeline for more robust classification.",
+    tags: ["Python", "Deep Learning", "CNN", "Jupyter", "Medical Imaging"],
+    link: "https://github.com/sfu-cmpt340/Stone-See",
   },
 ];
 

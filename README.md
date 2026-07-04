@@ -6,7 +6,7 @@ Personal portfolio of **Sadab Khan** — CS @ SFU · SWE @ OSI Maritime Systems 
 
 ## Stack
 
-React 18 + Vite + Framer Motion, with an Anthropic-inspired design system — warm cream palette, serif display type, terracotta accents, and generous whitespace.
+React 18 + Vite + Framer Motion, with an Anthropic-inspired design system — warm cream palette, serif display type, warm purple accents, and generous whitespace.
 
 - Typewriter role rotation, scroll-linked starburst mark, and staggered scroll-reveal animations
 - All content lives in [`src/data.js`](src/data.js) — edit that file to update the site
